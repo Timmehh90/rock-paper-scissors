@@ -21,10 +21,12 @@ function playRound(playerSelection, computerSelection) {
 
 function playGame() {
   let result = "";
-  let currentRound = 0;
-  while (currentRound < 5) {
+  let currentRound = 1;
+  while (currentRound <= 5) {
     let computerChoice = getComputerChoice();
-    let playerChoice = prompt('Choose "rock", "paper" or "scissors"');
+    let playerChoice = prompt(
+      "Round " + currentRound + '\nChoose: "rock", "paper" or "scissors".'
+    );
     result = playRound(playerChoice, computerChoice);
     console.log(result);
     currentRound++;
