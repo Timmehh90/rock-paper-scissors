@@ -63,7 +63,8 @@ function playGame() {
 
 // Main Loop
 
-playGame();
-// let playing = true;
+let playing = true;
 
-// while (playing) {}
+while (playing) {
+  playGame();
+}
