@@ -51,6 +51,14 @@ function playGame() {
   console.log(
     "Your score: " + playerScore + "\nComputer Score: " + computerScore
   );
+
+  if (playerScore > computerScore) {
+    console.log("Well played!");
+  } else if (playerScore < computerScore) {
+    console.log("Better luck next time!");
+  } else {
+    console.log("You tied all rounds!");
+  }
 }
 
 // Main Loop
