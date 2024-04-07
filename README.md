@@ -9,3 +9,5 @@
 9. If rock > scissors or paper > rock or scissors > paper
 10. You win/lose/tied round #
 11. Ending score with comment based on how well the player played.
+12. Prompt to play again
+13. If not say goodbye
