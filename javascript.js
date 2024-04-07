@@ -1,7 +1,7 @@
 // Functions
 
 function getComputerChoice() {
-  const choices = ["Rock", "Paper", "Scissors"];
+  const choices = ["rock", "paper", "scissors"];
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
@@ -9,9 +9,9 @@ function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     return "It's a draw";
   } else if (
-    (playerSelection === "Rock" && computerSelection === "Scissors") ||
-    (playerSelection === "Scissors" && computerSelection === "Paper") ||
-    (playerSelection === "Paper" && computerSelection === "Rock")
+    (playerSelection === "rock" && computerSelection === "scissors") ||
+    (playerSelection === "scissors" && computerSelection === "paper") ||
+    (playerSelection === "paper" && computerSelection === "rock")
   ) {
     return "You win!";
   } else {
@@ -21,10 +21,14 @@ function playRound(playerSelection, computerSelection) {
 
 function playGame() {
   let result = "";
-  let computerChoice = getComputerChoice();
-  let playerChoice = prompt('Choose "Rock", "Paper" or "Scissors"');
-  result = playRound(playerChoice, computerChoice);
-  console.log(result);
+  let currentRound = 0;
+  while (currentRound < 5) {
+    let computerChoice = getComputerChoice();
+    let playerChoice = prompt('Choose "rock", "paper" or "scissors"');
+    result = playRound(playerChoice, computerChoice);
+    console.log(result);
+    currentRound++;
+  }
 }
 
 // Main Loop
