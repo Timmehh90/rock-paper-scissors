@@ -19,11 +19,17 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+function playGame() {
+  let result = "";
+  let computerChoice = getComputerChoice();
+  let playerChoice = prompt('Choose "Rock", "Paper" or "Scissors"');
+  result = playRound(playerChoice, computerChoice);
+  console.log(result);
+}
+
 // Main Loop
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+playGame();
 // let playing = true;
 
 // while (playing) {}
