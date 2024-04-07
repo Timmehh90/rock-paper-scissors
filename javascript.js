@@ -1,11 +1,13 @@
 // Functions
 
 function getComputerChoice() {
-  return "Rock" || "Paper" || "Scissors";
+  const choices = ["Rock", "Paper", "Scissors"];
+  return choices[Math.floor(Math.random() * choices.length)];
 }
 
 // Main Loop
 
-let playing = True;
+console.log(getComputerChoice());
+// let playing = true;
 
-while (playing) {}
+// while (playing) {}
