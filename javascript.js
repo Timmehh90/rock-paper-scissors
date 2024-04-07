@@ -53,9 +53,9 @@ function playGame() {
   );
 
   if (playerScore > computerScore) {
-    console.log("Well played!");
+    console.log("You win. Well played!");
   } else if (playerScore < computerScore) {
-    console.log("Better luck next time!");
+    console.log("You lose. Better luck next time!");
   } else {
     console.log("You tied all rounds!");
   }
