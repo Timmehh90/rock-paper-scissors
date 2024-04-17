@@ -58,10 +58,6 @@ function playGame() {
   }
 }
 
-// Main Loop
-
-let playing = true;
-
-while (playing) {
-  playGame();
-}
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
