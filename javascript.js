@@ -49,19 +49,18 @@ function updateResult(
 
 // Variables
 const container = document.querySelector(".container");
-
 const playerChoiceDisplay = document.querySelector(".player-choice");
 const computerChoiceDisplay = document.querySelector(".computer-choice");
 const playerScoreDisplay = document.querySelector(".player-score");
 const computerScoreDisplay = document.querySelector(".computer-score");
 
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
 let playerScore = 0;
 let computerScore = 0;
 
 // Event listener
-const rock = document.querySelector("#rock");
-const paper = document.querySelector("#paper");
-const scissors = document.querySelector("#scissors");
 
 rock.addEventListener("click", () => {
   playRound("rock");
