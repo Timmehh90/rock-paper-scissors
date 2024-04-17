@@ -5,22 +5,34 @@ function getComputerChoice() {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
+function updateResult(playerSelection, computerSelection, result) {
+  const resultWindow = document.createElement("div");
+  resultWindow.classList.add("result");
+  resultWindow.innerHTML = `Player: ${playerSelection}.<br>Computer: ${computerSelection}.<br>You ${result}!`;
+  container.appendChild(resultWindow);
+}
+
 function playRound(playerSelection) {
   let computerSelection = getComputerChoice();
+  let result = "";
   console.log("Computer: " + computerSelection + " Player: " + playerSelection);
   if (playerSelection === computerSelection) {
-    return "draw";
+    result = "draw";
   } else if (
     (playerSelection === "rock" && computerSelection === "scissors") ||
     (playerSelection === "scissors" && computerSelection === "paper") ||
     (playerSelection === "paper" && computerSelection === "rock")
   ) {
-    return "win";
+    result = "win";
   } else {
-    return "lose";
+    result = "lose";
   }
+  updateResult(playerSelection, computerSelection, result);
 }
 
+// Variables
+
+const container = document.querySelector(".container");
 // Event listener
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
