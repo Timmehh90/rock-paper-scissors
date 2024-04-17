@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <h1 class="title">Rock, Paper, Scissors game</h1>
-      <div class="choice-window">
+      <div class="ask-choice">
         <h4 class="choice-prompt">What is your choice?</h4>
         <button class="btn" id="rock">Rock</button>
         <button class="btn" id="paper">Paper</button>
@@ -18,8 +18,25 @@
       <div class="score-and-result">
         <div class="score-window">
           <h3>Score</h3>
+          <p>
+            <i class="fa-solid fa-user"></i> <span class="player-score"></span>
+          </p>
+          <p>
+            <i class="fa-solid fa-robot"></i>
+            <span class="computer-score"></span>
+          </p>
         </div>
-        <div class="result-window"></div>
+        <div class="choice-window">
+          <h3>Choices</h3>
+          <p>
+            <i class="fa-solid fa-user"></i>
+            <span class="player-choice"></span>
+          </p>
+          <p>
+            <i class="fa-solid fa-robot"></i>
+            <span class="computer-choice"></span>
+          </p>
+        </div>
       </div>
     </div>
     <script src="./javascript.js"></script>
