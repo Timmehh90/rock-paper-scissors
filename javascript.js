@@ -11,7 +11,7 @@ function playRound(playerSelection) {
   let playerPoint = 0;
   let result = "";
   if (playerSelection === computerSelection) {
-    result = "draw";
+    result = "drew";
   } else if (
     (playerSelection === "rock" && computerSelection === "scissors") ||
     (playerSelection === "scissors" && computerSelection === "paper") ||
@@ -45,6 +45,7 @@ function updateResult(
   computerChoiceDisplay.textContent = computerSelection;
   playerScoreDisplay.textContent = playerScore;
   computerScoreDisplay.textContent = computerScore;
+  resultDisplay.innerHTML = `You ${result}`;
 }
 
 // Variables
@@ -53,6 +54,7 @@ const playerChoiceDisplay = document.querySelector(".player-choice");
 const computerChoiceDisplay = document.querySelector(".computer-choice");
 const playerScoreDisplay = document.querySelector(".player-score");
 const computerScoreDisplay = document.querySelector(".computer-score");
+const resultDisplay = document.querySelector(".round-result");
 
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");

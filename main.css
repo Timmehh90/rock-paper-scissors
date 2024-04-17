@@ -57,7 +57,8 @@
 }
 
 .choice-window,
-.score-window {
+.score-window,
+.result-window {
   color: var(--clr-900);
   line-height: 1.6;
   text-align: center;
