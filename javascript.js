@@ -39,13 +39,11 @@ function updateResult(
   computerPoint,
   playerPoint
 ) {
-  let computerScore = 0;
-  let playerScore = 0;
   computerScore += computerPoint;
   playerScore += playerPoint;
   const resultWindow = document.querySelector(".result-window");
   const scoreWindow = document.querySelector(".score-window");
-  scoreWindow.innerHTML = `Score<br>Player: ${playerScore}<br>Computer: ${computerScore}`;
+  scoreWindow.innerHTML = `<span class="score">Score</span><br>Player: ${playerScore}<br>Computer: ${computerScore}`;
   resultWindow.innerHTML = `Player: ${playerSelection}.<br>Computer: ${computerSelection}.<br>You ${result}!`;
   scoreAndResult.appendChild(resultWindow);
 } // Create a new div to display output of playRound function
@@ -53,6 +51,8 @@ function updateResult(
 // Variables
 const container = document.querySelector(".container");
 const scoreAndResult = document.querySelector(".score-and-result");
+let playerScore = 0;
+let computerScore = 0;
 
 // Event listener
 const rock = document.querySelector("#rock");

@@ -60,6 +60,7 @@
 .score-window {
   color: var(--clr-900);
   line-height: 1.6;
+  text-align: center;
 }
 
 .score-and-result {
@@ -67,4 +68,10 @@
   gap: 4rem;
   align-items: center;
   justify-content: center;
+}
+
+.score {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--clr-600);
 }
