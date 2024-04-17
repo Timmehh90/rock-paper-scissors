@@ -21,16 +21,17 @@ function playRound(playerSelection) {
   }
 }
 
+// Event listener
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 
-rock.addEventListener("click", function () {
+rock.addEventListener("click", () => {
   playRound("rock");
 });
-paper.addEventListener("click", function () {
+paper.addEventListener("click", () => {
   playRound("paper");
 });
-scissors.addEventListener("click", function () {
+scissors.addEventListener("click", () => {
   playRound("scissors");
 });
