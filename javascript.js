@@ -41,8 +41,6 @@ function updateResult(
 ) {
   computerScore += computerPoint;
   playerScore += playerPoint;
-  const resultWindow = document.querySelector(".result-window");
-  const scoreWindow = document.querySelector(".score-window");
   scoreWindow.innerHTML = `<span class="score">Score</span><br><i class="fa-solid fa-user"></i> ${playerScore}<br><i class="fa-solid fa-robot"></i> ${computerScore}`;
   resultWindow.innerHTML = `<i class="fa-solid fa-user"></i> ${playerSelection}.<br><i class="fa-solid fa-robot"></i> ${computerSelection}.<br><span class="result">You ${result}!</span>`;
   scoreAndResult.appendChild(resultWindow);
@@ -51,6 +49,8 @@ function updateResult(
 // Variables
 const container = document.querySelector(".container");
 const scoreAndResult = document.querySelector(".score-and-result");
+const resultWindow = document.querySelector(".result-window");
+const scoreWindow = document.querySelector(".score-window");
 let playerScore = 0;
 let computerScore = 0;
 
