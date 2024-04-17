@@ -56,7 +56,15 @@
   text-align: center;
 }
 
-.result-window {
+.result-window,
+.score-window {
   color: var(--clr-900);
   line-height: 1.6;
+}
+
+.score-and-result {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
 }
