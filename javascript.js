@@ -31,8 +31,8 @@ function updateResult(playerSelection, computerSelection, result) {
 } // Create a new div to display output of playRound function
 
 // Variables
-
 const container = document.querySelector(".container");
+
 // Event listener
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
