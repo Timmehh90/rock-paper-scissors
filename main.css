@@ -50,3 +50,11 @@
   margin-bottom: 5%;
   text-align: center;
 }
+
+.result-window {
+  color: var(--clr-900);
+  line-height: 1.6;
+  border: var(--clr-900) solid 3px;
+  padding: 20px;
+  border-radius: 10px;
+}
