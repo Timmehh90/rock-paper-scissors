@@ -65,8 +65,9 @@
 }
 
 .score-and-result {
-  display: flex;
-  gap: 4rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 10rem 10rem 10rem;
 }
 
 .score {
