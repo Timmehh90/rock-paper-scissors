@@ -43,8 +43,8 @@ function updateResult(
   playerScore += playerPoint;
   const resultWindow = document.querySelector(".result-window");
   const scoreWindow = document.querySelector(".score-window");
-  scoreWindow.innerHTML = `<span class="score">Score</span><br>Player: ${playerScore}<br>Computer: ${computerScore}`;
-  resultWindow.innerHTML = `Player: ${playerSelection}.<br>Computer: ${computerSelection}.<br>You ${result}!`;
+  scoreWindow.innerHTML = `<span class="score">Score</span><br><i class="fa-solid fa-user"></i> ${playerScore}<br><i class="fa-solid fa-robot"></i> ${computerScore}`;
+  resultWindow.innerHTML = `<i class="fa-solid fa-user"></i> ${playerSelection}.<br><i class="fa-solid fa-robot"></i> ${computerSelection}.<br><span class="result">You ${result}!</span>`;
   scoreAndResult.appendChild(resultWindow);
 } // Create a new div to display output of playRound function
 

@@ -66,12 +66,17 @@
 .score-and-result {
   display: flex;
   gap: 4rem;
-  align-items: center;
-  justify-content: center;
+  align-content: ;
 }
 
 .score {
   font-weight: 900;
   font-size: 1.5rem;
+  color: var(--clr-600);
+}
+
+.result {
+  font-weight: 700;
+  font-size: 1.4rem;
   color: var(--clr-600);
 }
