@@ -46,11 +46,11 @@ function updateResult(
   playerScoreDisplay.textContent = playerScore;
   computerScoreDisplay.textContent = computerScore;
   if (result === "win") {
-    resultDisplay.innerHTML = `You <span class="win">${result}</span>`;
+    resultDisplay.innerHTML = `You <span class="win outcome">${result}</span>`;
   } else if (result === "lose") {
-    resultDisplay.innerHTML = `You <span class="lose">${result}</span>`;
+    resultDisplay.innerHTML = `You <span class="lose outcome">${result}</span>`;
   } else {
-    resultDisplay.textContent = `You ${result}`;
+    resultDisplay.innerHTML = `You <span class="outcome">${result}</span>`;
   }
 }
 

@@ -89,3 +89,7 @@
 .lose {
   color: red;
 }
+
+.outcome {
+  font-weight: 800;
+}
