@@ -45,7 +45,13 @@ function updateResult(
   computerChoiceDisplay.textContent = computerSelection;
   playerScoreDisplay.textContent = playerScore;
   computerScoreDisplay.textContent = computerScore;
-  resultDisplay.innerHTML = `You ${result}`;
+  if (result === "win") {
+    resultDisplay.innerHTML = `You <span class="win">${result}</span>`;
+  } else if (result === "lose") {
+    resultDisplay.innerHTML = `You <span class="lose">${result}</span>`;
+  } else {
+    resultDisplay.textContent = `You ${result}`;
+  }
 }
 
 // Variables
