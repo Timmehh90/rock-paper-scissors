@@ -99,3 +99,7 @@
   font-size: 1.4rem;
   color: var(--clr-600);
 }
+
+#play-again {
+  margin-left: 1rem;
+}

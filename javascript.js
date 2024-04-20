@@ -58,6 +58,11 @@ function updateResult(
 function endGame(computerScore, playerScore) {
   const resultGame = document.createElement("h2");
   resultGame.classList.add("result-game");
+  const playAgain = document.createElement("button");
+  playAgain.classList.add("btn");
+  playAgain.id = "play-again";
+  playAgain.style.gridColumn = "3";
+  playAgain.textContent = "Play again?";
   if (computerScore === 5) {
     while (gameContainer.firstChild) {
       gameContainer.removeChild(gameContainer.firstChild);
@@ -65,6 +70,7 @@ function endGame(computerScore, playerScore) {
     resultGame.innerHTML = "You lose to mr. Robot.<br>Better luck next time!";
     resultGame.style.gridColumn = "2";
     gameContainer.appendChild(resultGame);
+    gameContainer.appendChild(playAgain);
   } else if (playerScore === 5) {
     while (gameContainer.firstChild) {
       gameContainer.removeChild(gameContainer.firstChild);
@@ -72,9 +78,15 @@ function endGame(computerScore, playerScore) {
     resultGame.textContent = "Congratulations! You win the game!";
     resultGame.style.gridColumn = "2";
     gameContainer.appendChild(resultGame);
-  } else {
-    null;
+    gameContainer.appendChild(playAgain);
   }
+  playAgain.addEventListener("click", () => {
+    resetGame();
+  });
+}
+
+function resetGame() {
+  location.reload();
 }
 
 // Variables
@@ -92,7 +104,6 @@ let playerScore = 0;
 let computerScore = 0;
 
 // Event listener
-
 rock.addEventListener("click", () => {
   playRound("rock");
 });
