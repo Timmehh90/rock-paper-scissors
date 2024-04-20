@@ -62,9 +62,8 @@ function endGame(computerScore, playerScore) {
     while (gameContainer.firstChild) {
       gameContainer.removeChild(gameContainer.firstChild);
     }
-    resultGame.textContent = "You lose to mr. Robot. Better luck next time!";
+    resultGame.innerHTML = "You lose to mr. Robot.<br>Better luck next time!";
     resultGame.style.gridColumn = "2";
-    resultGame.style.gridTemplateColumns = "1rem 28rem 1rem";
     gameContainer.appendChild(resultGame);
   } else if (playerScore === 5) {
     while (gameContainer.firstChild) {
@@ -72,7 +71,6 @@ function endGame(computerScore, playerScore) {
     }
     resultGame.textContent = "Congratulations! You win the game!";
     resultGame.style.gridColumn = "2";
-    resultGame.style.gridTemplateColumns = "1rem 28rem 1rem";
     gameContainer.appendChild(resultGame);
   } else {
     null;

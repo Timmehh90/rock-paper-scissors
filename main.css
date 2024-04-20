@@ -67,7 +67,7 @@
 .score-and-result {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 10rem 10rem 10rem;
+  grid-template-columns: 10rem auto 10rem;
 }
 
 .score {
