@@ -93,3 +93,9 @@
 .outcome {
   font-weight: 800;
 }
+
+.result-game {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--clr-600);
+}
