@@ -52,7 +52,7 @@ function updateResult(
   } else {
     resultDisplay.innerHTML = `You <span class="outcome">${result}</span>`;
   }
-}
+} // Updates game result, game score and player and computer choices into the HTML file
 
 // Variables
 const container = document.querySelector(".container");
@@ -61,7 +61,6 @@ const computerChoiceDisplay = document.querySelector(".computer-choice");
 const playerScoreDisplay = document.querySelector(".player-score");
 const computerScoreDisplay = document.querySelector(".computer-score");
 const resultDisplay = document.querySelector(".round-result");
-
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
