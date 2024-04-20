@@ -52,10 +52,36 @@ function updateResult(
   } else {
     resultDisplay.innerHTML = `You <span class="outcome">${result}</span>`;
   }
+  endGame(computerScore, playerScore);
 } // Updates game result, game score and player and computer choices into the HTML file
+
+function endGame(computerScore, playerScore) {
+  const resultGame = document.createElement("h2");
+  resultGame.classList.add("result-game");
+  if (computerScore === 5) {
+    while (gameContainer.firstChild) {
+      gameContainer.removeChild(gameContainer.firstChild);
+    }
+    resultGame.textContent = "You lose to mr. Robot. Better luck next time!";
+    resultGame.style.gridColumn = "2";
+    resultGame.style.gridTemplateColumns = "1rem 28rem 1rem";
+    gameContainer.appendChild(resultGame);
+  } else if (playerScore === 5) {
+    while (gameContainer.firstChild) {
+      gameContainer.removeChild(gameContainer.firstChild);
+    }
+    resultGame.textContent = "Congratulations! You win the game!";
+    resultGame.style.gridColumn = "2";
+    resultGame.style.gridTemplateColumns = "1rem 28rem 1rem";
+    gameContainer.appendChild(resultGame);
+  } else {
+    null;
+  }
+}
 
 // Variables
 const container = document.querySelector(".container");
+const gameContainer = document.querySelector(".score-and-result");
 const playerChoiceDisplay = document.querySelector(".player-choice");
 const computerChoiceDisplay = document.querySelector(".computer-choice");
 const playerScoreDisplay = document.querySelector(".player-score");
